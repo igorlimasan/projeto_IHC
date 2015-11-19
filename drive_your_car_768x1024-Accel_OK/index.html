@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		  <meta name="msapplication-tap-highlight" content="no"/>
+
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/createjs-2013.09.25.min.js"></script>
+        <script type="text/javascript" src="js/ctl_utils.js"></script>
+        <script type="text/javascript" src="js/sprite_lib.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/CLang.js"></script>
+        <script type="text/javascript" src="js/CPreloader.js"></script>
+        <script type="text/javascript" src="js/CMain.js"></script>
+        <script type="text/javascript" src="js/CTextButton.js"></script>
+        <script type="text/javascript" src="js/CGfxButton.js"></script>
+        <script type="text/javascript" src="js/CToggle.js"></script>
+        <script type="text/javascript" src="js/CMenu.js"></script>
+        <script type="text/javascript" src="js/CGame.js"></script>
+        <script type="text/javascript" src="js/CHero.js"></script>
+        <script type="text/javascript" src="js/CObstacle.js"></script>
+        <script type="text/javascript" src="js/CEndPanel.js"></script>
+        <script type="text/javascript" src="js/CScrollingBg.js"></script>
+        <script type="text/javascript" src="js/CHelpPanel.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js"></script>
+		<script language="javascript" type="text/javascript">
+			FB.init({
+				appId: '762834840512775',
+				status: true, 
+				cookie: true, 
+				xfbml: true
+			});    
+		</script>
+		
+        
+    </head>
+    <body  ondragstart="return false;" ondrop="return false;" >
+          
+		  <script>
+		   $(document).ready(function(){
+				var oMain = new CMain();
+				
+				$(oMain).on("game_start", function(evt) {
+					//alert("game_start");
+				});
+				
+				$(oMain).on("save_score", function(evt,score) {
+					//alert("save_score: "+score);
+				});
+				
+				$(oMain).on("restart", function(evt) {
+					//alert("restart");
+				});
+			});
+			
+			
+			
+				
+		  </script>
+		  
+        <canvas id="canvas" class='ani_hack' width="768" height="1024"> </canvas>
+
+    </body>
+</html>
